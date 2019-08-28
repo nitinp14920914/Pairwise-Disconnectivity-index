@@ -1,0 +1,88 @@
+############################################## NETWORK ANALYSIS TOOL AND PIPELINE #########################################################
+
+INSTALLATION
+
+Dependencies 
+	R-base
+	python
+	Matplotlib
+	python-igraph
+
+Matplotlib:
+
+	Debian / Ubuntu :  sudo apt-get install python-matplotlib
+	Fedora / Redhat :  sudo yum install python-matplotlib
+
+	for pip
+	python -m pip install -U pip setuptools
+	python -m pip install matplotlib
+
+python-igraph
+
+	Debian / Ubuntu : sudo apt-get install python-igraph
+	Fedora / Redhat : sudo yum install python-igraph
+
+	for pipe
+	pip install python-igraph
+
+R-base
+
+	Debian / Ubuntu :  sudo apt-get install r-base
+	Fedora / Redhat :  sudo yum install r-base
+
+
+******************************************************************************************************************************************************
+
+LIST OF CONTENTS 
+
+mapping_on_annotation_file.py
+pairwise_discon_vdisjoint_paths.py
+pairwise_dis_index.py
+readme
+string_data_download.r
+stringdb_parse.py
+tool.py
+x.sh
+
+*****************************************************************************************************************************************************
+
+PAIRWISE DISCONNECTIVITY INDEX PIPELINE
+
+Usage :
+
+	$ chmod +x
+	$ ./x.sh
+
+1.Select the organism from the species ID list 
+2.Enter specie ID 
+3.Results and raw files are saved in ./out directory 
+4.Result are saved in 3 files  *Result_crucialnodes.txt ->> mapped and annotated file of all important nodes (value : 1) 
+			       *Result_moderatenodes.txt >> mapped and annotated file of all moderate  nodes (value : 0 > 1)   
+			       *Result_noncrucialnodes.txt >> mapped and annotated file of all non crucial nodes (value : 0)
+			      
+5.Remaining raw data is saved in ./out directory 
+6.parsed_out.txt is and weighted edgelist file after parsing the string data file so lated this can be used for further analysis with tool.py
+
+****************************************************************************************************************************************************
+
+NETWORK ANALYSIS TOOL
+
+usage :
+	python tool.py -format filename
+	
+for help 
+	
+	python tool.py -h
+
+*Entre the function number you want 
+*It Returns output for selcted function 
+*Network output files are written in graphml format 
+*there is also a ./temp directory associated with tool.py 
+
+******************************************************************************************************************************************************
+
+For any trouble and query 
+E-mail: nitin53_sit@jnu.ac.in
+        andrew@jnu.ac.in
+        nitinp14920914@gmail.com
+
